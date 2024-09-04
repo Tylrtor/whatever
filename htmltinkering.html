@@ -35,6 +35,59 @@
         .headline {
             margin-top: 50px;
         }
+    /* Style the banner */
+        #banner {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Style the close (X) button */
+        #close-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Style the image inside the banner */
+        #banner img {
+            max-width: 700px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="banner">
+        <img src="bannerad.png" alt="Ad Banner">
+        <button id="close-btn">X</button>
+    </div>
+
+    <script>
+        const banner = document.getElementById('banner');
+        const closeButton = document.getElementById('close-btn');
+
+        closeButton.addEventListener('click', () => {
+            banner.style.display = 'none';
+            setTimeout(() => {
+                banner.style.display = 'flex'; // Show it again after 2 seconds
+            }, 2000);
+        });
+    </script>
+
+    
+    
     </style>
 </head>
 <body>
@@ -84,7 +137,7 @@
     <img
       src="aboutus.png"
       alt="Description of image"
-      style="width: 200px; height: auto"
+      style="width: 300px; height: auto"
     />
     
     <p>
