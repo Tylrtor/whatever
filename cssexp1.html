@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            background-color: red;
+        }
+
+        .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+        }
+        .fixed-photo {
+            position: fixed; /* Stays in place when you scroll */
+            bottom: 10px; /* Distance from the bottom of the viewport */
+            right: 10px; /* Distance from the right of the viewport */
+            width: 190px; /* Width of the image */
+            height: auto; /* Auto-adjusts height */
+            z-index: 9999; /* Ensures the image stays on top of other elements */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better visibility */
+        }
+            .title {
+              background-color: black; /* Black background behind the text */
+            background-image: url('killionare.gif'); /* Path to your GIF */
+            background-size: 82px;
+            background-position: top;
+            -webkit-background-clip: text; /* Clip the background to the text */
+            -webkit-text-fill-color: transparent; /* Make the text transparent to show the GIF */
+            color: transparent; /* Ensure text is transparent */
+            font-family: Georgia, serif;
+            font-size: 50px;
+            font-style: italic;
+            display: inline-block; /* So the background only applies to the text */
+            }         
+            
+            h2 {
+                color: #ff0000;
+                font-family: Georgia, serif;
+                text-decoration: underline;
+                text-align: center;
+                animation: blink-underline 1s infinite;
+            }
+             /* Keyframes to create the blinking effect */
+      
+             @keyframes blink-underline {
+            0% {
+                text-decoration-color: transparent; /* Hide the underline */
+            }
+            50% {
+                text-decoration-color: red; /* Show the underline */
+            }
+            100% {
+                text-decoration-color: transparent; /* Hide the underline again */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="title"> UFC FORBES 100 KILLIONARE BLOODBATH DEATHMATCH</div>
+    <img
+      src="fight.png"
+      alt="Description of image"
+      style="width: 500px; height: 300px"
+    />
+
+    <h2>TODAYS FIGHTERS</h2>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+        <div>4</div>
+
+      </div>
+
+    <img src="garyvee.png" alt="Ad" class="fixed-photo">
+</body>
+
+</html>
